@@ -1,0 +1,15 @@
+i) Create the circuit of the imagine. 
+First inverter Width= 800nm.
+Second inverter Width= 150nm.
+Third inverter Width= 800nm.
+
+For the vpulse use:
+Delay time 0 s
+Rise time 10n s
+Fall time 10n s
+Pulse width 100n s
+Period 200 ns 
+
+Find the waveforms, conduct dc and transient analysis with capactior= 1f and 5f.
+
+ii) Calculate the propagation delay when output: 1->0 and 0->1 and the rise and fall time of the outputs.
