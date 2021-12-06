@@ -1,0 +1,9 @@
+Schematic                       | Layout                        | Status
+-------------------------------------------------------------------------------
+NAND schematic MyDesignLib      | NAND layout MyDesignLib       | expanded  
+XOR_1 schematic MyDesignLib     | XOR_1 layout MyDesignLib      | expanded  
+FullAdder schematic MyDesignLib | FullAdder layout MyDesignLib  | errors     *
+
+Mismatch between Schematic and Layout
+   1 cell with errors
+   2 cells expanded

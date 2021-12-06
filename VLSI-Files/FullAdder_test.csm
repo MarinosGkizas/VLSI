@@ -1,0 +1,7 @@
+Schematic                       | Layout                        | Status
+-------------------------------------------------------------------------------
+NAND schematic MyDesignLib      | NAND layout MyDesignLib       | expanded  
+XOR_1 schematic MyDesignLib     | XOR_1 layout MyDesignLib      | expanded  
+FullAdder schematic MyDesignLib | FullAdder layout MyDesignLib  | matched   
+
+Schematic and Layout Match

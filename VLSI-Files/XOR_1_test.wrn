@@ -1,0 +1,36 @@
+Assura Errors & Warnings Search (PLEASE CAREFULLY REVIEW THESE MESSAGES)
+================================================================================
+WARNINGS & ERRORS found in Assura NVN Run Log file
+--------------------------------------------------------------------------------
+ WARNING (AVLVSNN-10050) : capDevice - cell 'PCAP_33_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'PCAP_25_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'PCAP_18_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'PCAP_12_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'NCAP_33_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'NCAP_25_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'NCAP_18_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'NCAP_12_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : dioDevice - cell 'DIOP_LL_A(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : dioDevice - cell 'DION_LL_A(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : dioDevice - cell 'DIOP_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : dioDevice - cell 'DION_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM10(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM9(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM8(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM7(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM6(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM5(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM4(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM3(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM2(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RM1(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RSNWELL_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RSNPO_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RSPPO_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RSND_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RSPD_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RNHR_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RNNPO_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RNPPO_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RNND_LL(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'RNPD_LL(GENERIC)' not found.

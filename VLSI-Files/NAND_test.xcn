@@ -1,0 +1,788 @@
+connect lay1b M1
+connect lay1a M1
+connect lay2b M2
+connect lay2a M2
+connect VP3_ME2_1 M2
+connect VP3_ME2_2 M2
+connect VP4_ME2_1 M2
+connect VP4_ME2_2 M2
+connect VP5_ME2_1 M2
+connect VP5_ME2_2 M2
+connect lay3b M3
+connect lay3a M3
+connect VP3_ME3_1 M3
+connect VP3_ME3_2 M3
+connect VP3_ME3_3 M3
+connect VP4_ME3_1 M3
+connect VP4_ME3_2 M3
+connect VP4_ME3_3 M3
+connect VP5_ME3_1 M3
+connect VP5_ME3_2 M3
+connect VP5_ME3_3 M3
+connect lay4b M4
+connect lay4a M4
+connect VP3_ME4_3 M4
+connect VP3_ME4_4 M4
+connect VP4_ME4_3 M4
+connect VP4_ME4_4 M4
+connect VP5_ME4_3 M4
+connect VP5_ME4_4 M4
+connect lay5b M5
+connect lay5a M5
+connect VP3_ME5_4 M5
+connect VP4_ME5_4 M5
+connect VP5_ME5_4 M5
+connect lay6b M6
+connect lay6a M6
+connect Lterm1 lay1a
+connect Lterm1 lay2a
+connect Lterm1 lay3a
+connect Lterm1 lay4a
+connect Lterm2 lay5a
+connect Lterm2 lay6a
+connect Lterm1 lay1b
+connect Lterm2 lay2b
+connect Lterm2 lay3b
+connect Lterm2 lay4b
+connect Lterm2 lay5b
+connect Lterm2 lay6b
+connect psd_cell psd
+connect nsd_cell psd
+connect nsd_cell nsd
+connect psd_cell nsd
+text po_text attach PLY
+text m1_text attach M1
+text m2_text attach M2
+text m3_text attach M3
+text m4_text attach M4
+text m5_text attach M5
+text m6_text attach M6
+text m7_text attach M7
+text m8_text attach M8
+text m9_text attach M9
+text m10_text attach M10
+text al_text attach AL_RDL
+text po_textt attach PLY
+text m1_textt attach M1
+text m2_textt attach M2
+text m3_textt attach M3
+text m4_textt attach M4
+text m5_textt attach M5
+text m6_textt attach M6
+text m7_textt attach M7
+text m8_textt attach M8
+text m9_textt attach M9
+text m10_textt attach M10
+text al_textt attach AL_RDL
+connect M1 PLY by polycon
+connect M1 SCONT by polycon
+connect PLY SCONT by polycon
+connect M1 nsd by nsdcon
+connect M1 SCONT by nsdcon
+connect nsd SCONT by nsdcon
+connect M1 psd by psdcon
+connect M1 ptap by pwCon
+connect M1 ntap by nwCon
+connect M1 ttap by twCon
+connect M1 M2 by VI1
+connect M2 M3 by VI2
+connect M3 M4 by VI3
+connect M4 M5 by VI4
+connect M5 M6 by VI5
+connect M6 M7 by VI6
+connect M8 M9 by VI8
+connect M9 M10 by VI9
+connect AL_RDL M10 by TMV_RDL
+connect M8 MMCTP by _VI7_MMCTP
+connect M8 MMCBP by _VI7_MMCBP
+connect M8 M7 by _VI7_M7
+stamp PSUB by ptap
+stamp wel by ntap
+stamp TWELL by ttap
+stamp DNW_SOFTCHK by ntap
+stamp PSUB_SOFTCHK by ptap
+stamp PNP_E_20 by psd
+stamp PNP_E_32 by psd
+stamp PNP_E_50 by psd
+stamp PNP_E_100 by psd
+stamp NPN_E_20 by nsd
+stamp NPN_E_32 by nsd
+stamp NPN_E_50 by nsd
+stamp NPN_E_100 by nsd
+stamp rfpd by psd
+stamp rfps by psd
+stamp rfnd by nsd
+stamp rfns by nsd
+stamp PWELL_A by PSUB
+stamp wel_A by wel
+connect MOMVP1_MM_1_term M2
+connect MOMVP2_MM_1_term_p M2
+connect MOMVP2_MM_1_term_m M2
+connect MOM2_MESH_SY_P1_term M2
+connect MOM2_MESH_SY_P2_term M2
+connect MOM3_MESH_SY_M1_term M3
+connect MOM3_MESH_SY_M2_term M3
+connect MOM3_MESH_ASY_P1_term M3
+connect MOM3_MESH_ASY_P2_term M3
+connect MOM2_MESH_ASY_M1_term M2
+connect MOM2_MESH_ASY_M2_term M2
+connect MOMVP1_MM_2_term M3
+connect MOMVP2_MM_2_term_p M3
+connect MOMVP2_MM_2_term_m M3
+connect MOM3_MESH_SY_P1_term M3
+connect MOM3_MESH_SY_P2_term M3
+connect MOM4_MESH_SY_M1_term M4
+connect MOM4_MESH_SY_M2_term M4
+connect MOM4_MESH_ASY_P1_term M4
+connect MOM4_MESH_ASY_P2_term M4
+connect MOM3_MESH_ASY_M1_term M3
+connect MOM3_MESH_ASY_M2_term M3
+connect MOMVP1_MM_3_term M4
+connect MOMVP2_MM_3_term_p M4
+connect MOMVP2_MM_3_term_m M4
+connect MOM4_MESH_SY_P1_term M4
+connect MOM4_MESH_SY_P2_term M4
+connect MOM5_MESH_SY_M1_term M5
+connect MOM5_MESH_SY_M2_term M5
+connect MOM5_MESH_ASY_P1_term M5
+connect MOM5_MESH_ASY_P2_term M5
+connect MOM4_MESH_ASY_M1_term M4
+connect MOM4_MESH_ASY_M2_term M4
+connect MOMVP1_MM_4_term M5
+connect MOM5_MESH_SY_P1_term M5
+connect MOM5_MESH_SY_P2_term M5
+connect MOM6_MESH_SY_M1_term M6
+connect MOM6_MESH_SY_M2_term M6
+connect M1_MOM_MESH M1
+connect M2_MOM_MESH M2
+connect M3_MOM_MESH M3
+connect M4_MOM_MESH M4
+connect M5_MOM_MESH M5
+connect M6_MOM_MESH M6
+connect M1_MOM_H2 M1
+connect M2_MOM_H2 M2
+connect M3_MOM_H2 M3
+connect M4_MOM_H2 M4
+connect M5_MOM_H2 M5
+connect M6_MOM_H2 M6
+connect PLY_SHIELD_SY PLY
+connect ME1_SHIELD_SY M1
+connect ME2_SHIELD_SY M2
+connect ME3_SHIELD_SY M3
+model=mos[N_12_LLRVT],N_12_LLRVT
+dfiimodel=mos[N_12_LLRVT],N_12_LLRVT#20ivpcell
+element mos[N_12_LLRVT] N_LLRVT_G_MOS_1 PLY nsd PSUB 
+model=mos[N_12_LLRVT_av2],N_12_LLRVT
+dfiimodel=mos[N_12_LLRVT_av2],N_12_LLRVT#20ivpcell
+element mos[N_12_LLRVT_av2] N_LLRVTBPW_G_MOS_2 PLY nsd TWELL 
+model=mos[P_12_LLRVT],P_12_LLRVT
+dfiimodel=mos[P_12_LLRVT],P_12_LLRVT#20ivpcell
+element mos[P_12_LLRVT] P_LLRVT_G_MOS_3 PLY psd wel 
+model=generic[n_12_llrvtrf],n_12_llrvtrf
+dfiimodel=generic[n_12_llrvtrf],N_12_LLRVTRF#20ivpcell
+element generic[n_12_llrvtrf] D_N_LLRVT_G_RF_Device_4 rfnd[D] PLY[G] rfns[S] PSUB[B] 
+model=generic[n_bpw_12_llrvtrf],n_bpw_12_llrvtrf
+dfiimodel=generic[n_bpw_12_llrvtrf],N_BPW_12_LLRVTRF#20ivpcell
+element generic[n_bpw_12_llrvtrf] D_N_LLRVTBPW_G_RF_DF_Device_5 rfnd[D] PLY[G] rfns[S] TWELL[B] wel_A[NW] PWELL_A[PSUB] 
+model=generic[p_12_llrvtrf],p_12_llrvtrf
+dfiimodel=generic[p_12_llrvtrf],P_12_LLRVTRF#20ivpcell
+element generic[p_12_llrvtrf] D_P_LLRVT_G_RF_DF_Device_6 rfpd[D] PLY[G] rfps[S] wel_A[B] PWELL_A[PSUB] 
+model=mos[N_12_LLHVT],N_12_LLHVT
+dfiimodel=mos[N_12_LLHVT],N_12_LLHVT#20ivpcell
+element mos[N_12_LLHVT] N_LLHVT_G_MOS_7 PLY nsd PSUB 
+model=mos[N_12_LLHVT_av2],N_12_LLHVT
+dfiimodel=mos[N_12_LLHVT_av2],N_12_LLHVT#20ivpcell
+element mos[N_12_LLHVT_av2] N_LLHVTBPW_G_MOS_8 PLY nsd TWELL 
+model=mos[P_12_LLHVT],P_12_LLHVT
+dfiimodel=mos[P_12_LLHVT],P_12_LLHVT#20ivpcell
+element mos[P_12_LLHVT] P_LLHVT_G_MOS_9 PLY psd wel 
+model=generic[n_12_llhvtrf],n_12_llhvtrf
+dfiimodel=generic[n_12_llhvtrf],N_12_LLHVTRF#20ivpcell
+element generic[n_12_llhvtrf] D_N_LLHVT_G_RF_Device_10 rfnd[D] PLY[G] rfns[S] PSUB[B] 
+model=generic[n_bpw_12_llhvtrf],n_bpw_12_llhvtrf
+dfiimodel=generic[n_bpw_12_llhvtrf],N_BPW_12_LLHVTRF#20ivpcell
+element generic[n_bpw_12_llhvtrf] D_N_LLHVTBPW_G_RF_DF_Device_11 rfnd[D] PLY[G] rfns[S] TWELL[B] wel_A[NW] PWELL_A[PSUB] 
+model=generic[p_12_llhvtrf],p_12_llhvtrf
+dfiimodel=generic[p_12_llhvtrf],P_12_LLHVTRF#20ivpcell
+element generic[p_12_llhvtrf] D_P_LLHVT_G_RF_DF_Device_12 rfpd[D] PLY[G] rfps[S] wel_A[B] PWELL_A[PSUB] 
+model=mos[n_12_lllvt],n_12_lllvt
+dfiimodel=mos[n_12_lllvt],N_12_LLLVT#20ivpcell
+element mos[n_12_lllvt] N_LLLVT_G_MOS_13 PLY nsd PSUB 
+model=mos[n_12_lllvt_av2],n_12_lllvt
+dfiimodel=mos[n_12_lllvt_av2],N_12_LLLVT#20ivpcell
+element mos[n_12_lllvt_av2] N_LLLVTBPW_G_MOS_14 PLY nsd TWELL 
+model=mos[p_12_lllvt],p_12_lllvt
+dfiimodel=mos[p_12_lllvt],P_12_LLLVT#20ivpcell
+element mos[p_12_lllvt] P_LLLVT_G_MOS_15 PLY psd wel 
+model=generic[n_12_lllvtrf],n_12_lllvtrf
+dfiimodel=generic[n_12_lllvtrf],N_12_LLLVTRF#20ivpcell
+element generic[n_12_lllvtrf] D_N_LLLVT_G_RF_Device_16 rfnd[D] PLY[G] rfns[S] PSUB[B] 
+model=generic[n_bpw_12_lllvtrf],n_bpw_12_lllvtrf
+dfiimodel=generic[n_bpw_12_lllvtrf],N_BPW_12_LLLVTRF#20ivpcell
+element generic[n_bpw_12_lllvtrf] D_N_LLLVTBPW_G_RF_DF_Device_17 rfnd[D] PLY[G] rfns[S] TWELL[B] wel_A[NW] PWELL_A[PSUB] 
+model=generic[p_12_lllvtrf],p_12_lllvtrf
+dfiimodel=generic[p_12_lllvtrf],P_12_LLLVTRF#20ivpcell
+element generic[p_12_lllvtrf] D_P_LLLVT_G_RF_DF_Device_18 rfpd[D] PLY[G] rfps[S] wel_A[B] PWELL_A[PSUB] 
+model=mos[N_12_LLNVT],N_12_LLNVT
+dfiimodel=mos[N_12_LLNVT],N_12_LLNVT#20ivpcell
+element mos[N_12_LLNVT] N_NVT_G_MOS_19 PLY nsd PSUB 
+model=mos[N_BPW_12_LLNVT],N_BPW_12_LLNVT
+dfiimodel=mos[N_BPW_12_LLNVT],N_BPW_12_LLNVT#20ivpcell
+element mos[N_BPW_12_LLNVT] N_NVT_G_BPW_MOS_20 PLY nsd TWELL 
+model=mos[N_25_LL],N_25_LL
+dfiimodel=mos[N_25_LL],N_25_LL#20ivpcell
+element mos[N_25_LL] N_IO_G_MOS_21 PLY nsd PSUB 
+model=mos[N_25_LL_av2],N_25_LL
+dfiimodel=mos[N_25_LL_av2],N_25_LL#20ivpcell
+element mos[N_25_LL_av2] N_IO_BPW_G_MOS_22 PLY nsd TWELL 
+model=mos[N_25OD33_LL],N_25OD33_LL
+dfiimodel=mos[N_25OD33_LL],N_25OD33_LL#20ivpcell
+element mos[N_25OD33_LL] N_IO_OD_G_MOS_23 PLY nsd PSUB 
+model=mos[N_25OD33_LL_av2],N_25OD33_LL
+dfiimodel=mos[N_25OD33_LL_av2],N_25OD33_LL#20ivpcell
+element mos[N_25OD33_LL_av2] N_IO_BPW_OD_G_MOS_24 PLY nsd TWELL 
+model=mos[P_25_LL],P_25_LL
+dfiimodel=mos[P_25_LL],P_25_LL#20ivpcell
+element mos[P_25_LL] P_IO_G_MOS_25 PLY psd wel 
+model=mos[P_25OD33_LL],P_25OD33_LL
+dfiimodel=mos[P_25OD33_LL],P_25OD33_LL#20ivpcell
+element mos[P_25OD33_LL] P_IO_OD_G_MOS_26 PLY psd wel 
+model=generic[n_25_llrf],n_25_llrf
+dfiimodel=generic[n_25_llrf],N_25_LLRF#20ivpcell
+element generic[n_25_llrf] D_N_IO_G_RF_Device_27 rfnd[D] PLY[G] rfns[S] PSUB[B] 
+model=generic[n_bpw_25_llrf],n_bpw_25_llrf
+dfiimodel=generic[n_bpw_25_llrf],N_BPW_25_LLRF#20ivpcell
+element generic[n_bpw_25_llrf] D_N_IOBPW_G_RF_DF_Device_28 rfnd[D] PLY[G] rfns[S] TWELL[B] wel_A[NW] PWELL_A[PSUB] 
+model=generic[p_25_llrf],p_25_llrf
+dfiimodel=generic[p_25_llrf],P_25_LLRF#20ivpcell
+element generic[p_25_llrf] RFD_P_IO_G_RF_DF_Device_29 rfpd[D] PLY[G] rfps[S] wel_A[B] PWELL_A[PSUB] 
+model=mos[N_25_LLNVT],N_25_LLNVT
+dfiimodel=mos[N_25_LLNVT],N_25_LLNVT#20ivpcell
+element mos[N_25_LLNVT] N_NVT_TG_MOS_30 PLY nsd PSUB 
+model=mos[N_BPW_25_LLNVT],N_BPW_25_LLNVT
+dfiimodel=mos[N_BPW_25_LLNVT],N_BPW_25_LLNVT#20ivpcell
+element mos[N_BPW_25_LLNVT] N_NVT_TG_BPW_MOS_31 PLY nsd TWELL 
+model=mos[N_25OD33_LLNVT],N_25OD33_LLNVT
+dfiimodel=mos[N_25OD33_LLNVT],N_25OD33_LLNVT#20ivpcell
+element mos[N_25OD33_LLNVT] N_NVT_TG_OD_MOS_32 PLY nsd PSUB 
+model=mos[N_BPW_25OD33_LLNVT],N_BPW_25OD33_LLNVT
+dfiimodel=mos[N_BPW_25OD33_LLNVT],N_BPW_25OD33_LLNVT#20ivpcell
+element mos[N_BPW_25OD33_LLNVT] N_NVT_TG_OD_BPW_MOS_33 PLY nsd TWELL 
+model=mos[N_PG52P5_LLHVT],N_PG52P5_LLHVT
+dfiimodel=mos[N_PG52P5_LLHVT],N_PG52P5_LLHVT
+element mos[N_PG52P5_LLHVT] N_PG52P5_LLHVT_MOS_34 PLY nsd PSUB 
+model=mos[N_PG52P5_LLHVT_av2],N_PG52P5_LLHVT
+dfiimodel=mos[N_PG52P5_LLHVT_av2],N_PG52P5_LLHVT
+element mos[N_PG52P5_LLHVT_av2] N_PG52P5_LLHVT_BPW_MOS_35 PLY nsd TWELL 
+model=mos[N_PD52P5_LLHVT],N_PD52P5_LLHVT
+dfiimodel=mos[N_PD52P5_LLHVT],N_PD52P5_LLHVT
+element mos[N_PD52P5_LLHVT] N_PD52P5_LLHVT_MOS_36 PLY nsd PSUB 
+model=mos[N_PD52P5_LLHVT_av2],N_PD52P5_LLHVT
+dfiimodel=mos[N_PD52P5_LLHVT_av2],N_PD52P5_LLHVT
+element mos[N_PD52P5_LLHVT_av2] N_PD52P5_LLHVT_BPW_MOS_37 PLY nsd TWELL 
+model=mos[P_L52P5_LLHVT],P_L52P5_LLHVT
+dfiimodel=mos[P_L52P5_LLHVT],P_L52P5_LLHVT
+element mos[P_L52P5_LLHVT] P_L52P5_LLHVT_MOS_38 PLY psd wel 
+model=mos[N_PG97P4_LLHVT],N_PG97P4_LLHVT
+dfiimodel=mos[N_PG97P4_LLHVT],N_PG97P4_LLHVT
+element mos[N_PG97P4_LLHVT] N_PG97P4_LLHVT_MOS_39 PLY nsd PSUB 
+model=mos[N_PG97P4_LLHVT_av2],N_PG97P4_LLHVT
+dfiimodel=mos[N_PG97P4_LLHVT_av2],N_PG97P4_LLHVT
+element mos[N_PG97P4_LLHVT_av2] N_PG97P4_LLHVT_BPW_MOS_40 PLY nsd TWELL 
+model=mos[N_PD97P4_LLHVT],N_PD97P4_LLHVT
+dfiimodel=mos[N_PD97P4_LLHVT],N_PD97P4_LLHVT
+element mos[N_PD97P4_LLHVT] N_PD97P4_LLHVT_MOS_41 PLY nsd PSUB 
+model=mos[N_PD97P4_LLHVT_av2],N_PD97P4_LLHVT
+dfiimodel=mos[N_PD97P4_LLHVT_av2],N_PD97P4_LLHVT
+element mos[N_PD97P4_LLHVT_av2] N_PD97P4_LLHVT_BPW_MOS_42 PLY nsd TWELL 
+model=mos[P_L97P4_LLHVT],P_L97P4_LLHVT
+dfiimodel=mos[P_L97P4_LLHVT],P_L97P4_LLHVT
+element mos[P_L97P4_LLHVT] P_L97P4_LLHVTa_MOS_43 PLY psd wel 
+model=mos[N_PG144P5CAM_LLHVT],N_PG144P5CAM_LLHVT
+dfiimodel=mos[N_PG144P5CAM_LLHVT],N_PG144P5CAM_LLHVT
+element mos[N_PG144P5CAM_LLHVT] N_PG144P5CAM_LLHVT_MOS_44 PLY nsd PSUB 
+model=mos[N_PG144P5CAM_LLHVT_av2],N_PG144P5CAM_LLHVT
+dfiimodel=mos[N_PG144P5CAM_LLHVT_av2],N_PG144P5CAM_LLHVT
+element mos[N_PG144P5CAM_LLHVT_av2] N_PG144P5CAM_LLHVT_BPW_MOS_45 PLY nsd TWELL 
+model=mos[N_PD144P5CAM_LLHVT],N_PD144P5CAM_LLHVT
+dfiimodel=mos[N_PD144P5CAM_LLHVT],N_PD144P5CAM_LLHVT
+element mos[N_PD144P5CAM_LLHVT] N_PD144P5CAM_LLHVT_MOS_46 PLY nsd PSUB 
+model=mos[N_PD144P5CAM_LLHVT_av2],N_PD144P5CAM_LLHVT
+dfiimodel=mos[N_PD144P5CAM_LLHVT_av2],N_PD144P5CAM_LLHVT
+element mos[N_PD144P5CAM_LLHVT_av2] N_PD144P5CAM_LLHVT_BPW_MOS_47 PLY nsd TWELL 
+model=mos[N_CPD144P5CAM_LLHVT],N_CPD144P5CAM_LLHVT
+dfiimodel=mos[N_CPD144P5CAM_LLHVT],N_CPD144P5CAM_LLHVT
+element mos[N_CPD144P5CAM_LLHVT] N_CPD144P5CAM_LLHVT_MOS_48 PLY nsd PSUB 
+model=mos[N_CPD144P5CAM_LLHVT_av2],N_CPD144P5CAM_LLHVT
+dfiimodel=mos[N_CPD144P5CAM_LLHVT_av2],N_CPD144P5CAM_LLHVT
+element mos[N_CPD144P5CAM_LLHVT_av2] N_CPD144P5CAM_LLHVT_BPW_MOS_49 PLY nsd TWELL 
+model=mos[P_L144P5CAM_LLHVT],P_L144P5CAM_LLHVT
+dfiimodel=mos[P_L144P5CAM_LLHVT],P_L144P5CAM_LLHVT
+element mos[P_L144P5CAM_LLHVT] P_L144P5CAM_LLHVTa_MOS_50 PLY psd wel 
+model=generic[RSNWELL_LL],RSNWELL_LL
+dfiimodel=generic[RSNWELL_LL],RSNWELL_LL#20ivpcell
+element generic[RSNWELL_LL] welres_Device_51 wel[PLUS] wel[MINUS] PSUB[B] 
+model=generic_R[RSND_LL],RSND_LL
+dfiimodel=generic_R[RSND_LL],RSND_LL#20ivpcell
+element generic_R[RSND_LL] snyres_psub_Device_52 nsd[PLUS] nsd[MINUS] PSUB[B] 
+model=generic_R[RSND_LL_av2],RSND_LL
+dfiimodel=generic_R[RSND_LL_av2],RSND_LL#20ivpcell
+element generic_R[RSND_LL_av2] snyres_twell_Device_53 nsd[PLUS] nsd[MINUS] TWELL[B] 
+model=generic_R[RSPD_LL],RSPD_LL
+dfiimodel=generic_R[RSPD_LL],RSPD_LL#20ivpcell
+element generic_R[RSPD_LL] spyres_Device_54 psd[PLUS] psd[MINUS] wel[B] 
+model=generic_R[RSNPO_LL],RSNPO_LL
+dfiimodel=generic_R[RSNPO_LL],RSNPO_LL#20ivpcell
+element generic_R[RSNPO_LL] snpyr_psub_Device_55 PLY[PLUS] PLY[MINUS] PSUB[B] 
+model=generic_R[RSNPO_LL_av2],RSNPO_LL
+dfiimodel=generic_R[RSNPO_LL_av2],RSNPO_LL#20ivpcell
+element generic_R[RSNPO_LL_av2] snpyr_twell_Device_56 PLY[PLUS] PLY[MINUS] TWELL[B] 
+model=generic_R[RSPPO_LL],RSPPO_LL
+dfiimodel=generic_R[RSPPO_LL],RSPPO_LL#20ivpcell
+element generic_R[RSPPO_LL] sppyr_a_Device_57 PLY[PLUS] PLY[MINUS] wel[B] 
+model=res[RSNPO_EFUSE],RSNPO_EFUSE
+dfiimodel=res[RSNPO_EFUSE],RSNPO_EFUSE
+element res[RSNPO_EFUSE] snpyr_efuse_RES_58 PLY 
+model=res[RSPPO_EFUSE],RSPPO_EFUSE
+dfiimodel=res[RSPPO_EFUSE],RSPPO_EFUSE
+element res[RSPPO_EFUSE] sppyr_efuse_RES_59 PLY 
+model=generic[RNPD_LL],RNPD_LL
+dfiimodel=generic[RNPD_LL],RNPD_LL#20ivpcell
+element generic[RNPD_LL] nspdres_Device_60 psd[PLUS] psd[MINUS] wel[B] 
+model=generic_R[RNND_LL],RNND_LL
+dfiimodel=generic_R[RNND_LL],RNND_LL#20ivpcell
+element generic_R[RNND_LL] nsndres_Device_61 nsd[PLUS] nsd[MINUS] PSUB[B] 
+model=generic_R[RNND_LL_av2],RNND_LL
+dfiimodel=generic_R[RNND_LL_av2],RNND_LL#20ivpcell
+element generic_R[RNND_LL_av2] nsndres_Device_62 nsd[PLUS] nsd[MINUS] TWELL[B] 
+model=generic_R[RNPPO_LL],RNPPO_LL
+dfiimodel=generic_R[RNPPO_LL],RNPPO_LL#20ivpcell
+element generic_R[RNPPO_LL] nsppyr_twel_Device_63 PLY[PLUS] PLY[MINUS] TWELL[B] 
+model=generic_R[RNPPO_LL_av2],RNPPO_LL
+dfiimodel=generic_R[RNPPO_LL_av2],RNPPO_LL#20ivpcell
+element generic_R[RNPPO_LL_av2] nsppyr_wel_Device_64 PLY[PLUS] PLY[MINUS] wel[B] 
+model=generic_R[RNPPO_LL_av3],RNPPO_LL
+dfiimodel=generic_R[RNPPO_LL_av3],RNPPO_LL#20ivpcell
+element generic_R[RNPPO_LL_av3] nsppyr_psub_Device_65 PLY[PLUS] PLY[MINUS] PSUB[B] 
+model=generic_R[RNNPO_LL],RNNPO_LL
+dfiimodel=generic_R[RNNPO_LL],RNNPO_LL#20ivpcell
+element generic_R[RNNPO_LL] nsnpyr_twel_Device_66 PLY[PLUS] PLY[MINUS] TWELL[B] 
+model=generic_R[RNNPO_LL_av2],RNNPO_LL
+dfiimodel=generic_R[RNNPO_LL_av2],RNNPO_LL#20ivpcell
+element generic_R[RNNPO_LL_av2] nsnpyr_wel_Device_67 PLY[PLUS] PLY[MINUS] wel[B] 
+model=generic_R[RNNPO_LL_av3],RNNPO_LL
+dfiimodel=generic_R[RNNPO_LL_av3],RNNPO_LL#20ivpcell
+element generic_R[RNNPO_LL_av3] nsnpyr_psub_Device_68 PLY[PLUS] PLY[MINUS] PSUB[B] 
+model=generic_R[RNHR_LL],RNHR_LL
+dfiimodel=generic_R[RNHR_LL],RNHR_LL#20ivpcell
+element generic_R[RNHR_LL] nshrpyr_twel_Device_69 PLY[PLUS] PLY[MINUS] TWELL[B] 
+model=generic_R[RNHR_LL_av2],RNHR_LL
+dfiimodel=generic_R[RNHR_LL_av2],RNHR_LL#20ivpcell
+element generic_R[RNHR_LL_av2] nshrpyr_wel_Device_70 PLY[PLUS] PLY[MINUS] wel[B] 
+model=generic_R[RNHR_LL_av3],RNHR_LL
+dfiimodel=generic_R[RNHR_LL_av3],RNHR_LL#20ivpcell
+element generic_R[RNHR_LL_av3] nshrpyr_psub_Device_71 PLY[PLUS] PLY[MINUS] PSUB[B] 
+model=generic[rnnpo_nw_llrf],rnnpo_nw_llrf
+dfiimodel=generic[rnnpo_nw_llrf],RNNPO_NW_LLRF#20ivpcell
+element generic[rnnpo_nw_llrf] RF_NSNPYR_RFNW_Device_72 PLY[PLUS] PLY[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[rnnpo_llrf],rnnpo_llrf
+dfiimodel=generic[rnnpo_llrf],RNNPO_LLRF#20ivpcell
+element generic[rnnpo_llrf] NSNPYR_RF_Device_73 PLY[PLUS] PLY[MINUS] PSUB[PSUB] 
+model=generic[rnppo_nw_llrf],rnppo_nw_llrf
+dfiimodel=generic[rnppo_nw_llrf],RNPPO_NW_LLRF#20ivpcell
+element generic[rnppo_nw_llrf] RF_NSPPYR_RFNW_Device_74 PLY[PLUS] PLY[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[rnppo_llrf],rnppo_llrf
+dfiimodel=generic[rnppo_llrf],RNPPO_LLRF#20ivpcell
+element generic[rnppo_llrf] NSPPYR_RF_Device_75 PLY[PLUS] PLY[MINUS] PSUB[PSUB] 
+model=generic[rnhr_nw_llrf],rnhr_nw_llrf
+dfiimodel=generic[rnhr_nw_llrf],RNHR_NW_LLRF#20ivpcell
+element generic[rnhr_nw_llrf] RF_NSHRPYR_RFNW_Device_76 PLY[PLUS] PLY[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[rnhr_llrf],rnhr_llrf
+dfiimodel=generic[rnhr_llrf],RNHR_LLRF#20ivpcell
+element generic[rnhr_llrf] NSHRPYR_RF_Device_77 PLY[PLUS] PLY[MINUS] PSUB[PSUB] 
+model=generic[RM10],R_4X_LL
+dfiimodel=generic[RM10],RM10#20ivpcell
+element generic[RM10] m10res_Device_78 M10[PLUS] M10[MINUS] 
+model=generic[RM9],R_4X_LL
+dfiimodel=generic[RM9],RM9#20ivpcell
+element generic[RM9] m9res_Device_79 M9[PLUS] M9[MINUS] 
+model=generic[RM8],R_2X_LL
+dfiimodel=generic[RM8],RM8#20ivpcell
+element generic[RM8] m8res_Device_80 M8[PLUS] M8[MINUS] 
+model=generic[RM7],R_2X_LL
+dfiimodel=generic[RM7],RM7#20ivpcell
+element generic[RM7] m7res_Device_81 M7[PLUS] M7[MINUS] 
+model=generic[RM6],R_1X_LL
+dfiimodel=generic[RM6],RM6#20ivpcell
+element generic[RM6] m6res_Device_82 M6[PLUS] M6[MINUS] 
+model=generic[RM5],R_1X_LL
+dfiimodel=generic[RM5],RM5#20ivpcell
+element generic[RM5] m5res_Device_83 M5[PLUS] M5[MINUS] 
+model=generic[RM4],R_1X_LL
+dfiimodel=generic[RM4],RM4#20ivpcell
+element generic[RM4] m4res_Device_84 M4[PLUS] M4[MINUS] 
+model=generic[RM3],R_1X_LL
+dfiimodel=generic[RM3],RM3#20ivpcell
+element generic[RM3] m3res_Device_85 M3[PLUS] M3[MINUS] 
+model=generic[RM2],R_1X_LL
+dfiimodel=generic[RM2],RM2#20ivpcell
+element generic[RM2] m2res_Device_86 M2[PLUS] M2[MINUS] 
+model=generic[RM1],R_M1_LL
+dfiimodel=generic[RM1],RM1#20ivpcell
+element generic[RM1] m1res_Device_87 M1[PLUS] M1[MINUS] 
+model=res[RAL],RAL
+dfiimodel=res[RAL],RAL
+element res[RAL] ALRES_RES_88 AL_RDL 
+model=generic[varmis_12_llrf],varmis_12_llrf
+dfiimodel=generic[varmis_12_llrf],VARMIS_12_LLRF#20ivpcell
+element generic[varmis_12_llrf] varmis_rf12_Device_89 PLY[PLUS] wel[MINUS] PSUB[PSUB] 
+model=generic[varmis_25_llrf],varmis_25_llrf
+dfiimodel=generic[varmis_25_llrf],VARMIS_25_LLRF#20ivpcell
+element generic[varmis_25_llrf] varmis_rf25_Device_90 PLY[PLUS] wel[MINUS] PSUB[PSUB] 
+model=generic[vardiop_llrf],vardiop_llrf
+dfiimodel=generic[vardiop_llrf],VARDIOP_LLRF#20ivpcell
+element generic[vardiop_llrf] vard_rf_Device_91 psd[PLUS] wel[MINUS] PSUB[PSUB] 
+model=generic[DION_LL],DION_LL
+dfiimodel=generic[DION_LL],DION_LL#20ivpcell
+element generic[DION_LL] dndiod_Device_92 PSUB[PLUS] nsd[MINUS] 
+model=generic[DION_LL_av2],DION_LL
+dfiimodel=generic[DION_LL_av2],DION_LL#20ivpcell
+element generic[DION_LL_av2] dndiod_BPW_Device_93 TWELL[PLUS] nsd[MINUS] 
+model=generic[DION_LL_A],DION_LL_A
+dfiimodel=generic[DION_LL_A],DION_LL_A
+element generic[DION_LL_A] dndiod_A_Device_94 PSUB[PLUS] nsd[MINUS] 
+model=generic[DION_LL_A_av2],DION_LL_A
+dfiimodel=generic[DION_LL_A_av2],DION_LL_A
+element generic[DION_LL_A_av2] dndiod_A_BPW_Device_95 TWELL[PLUS] nsd[MINUS] 
+model=generic[DIOP_LL],DIOP_LL
+dfiimodel=generic[DIOP_LL],DIOP_LL#20ivpcell
+element generic[DIOP_LL] dpdiod_Device_96 psd[PLUS] wel[MINUS] 
+model=generic[DIOP_LL_A],DIOP_LL_A
+dfiimodel=generic[DIOP_LL_A],DIOP_LL_A
+element generic[DIOP_LL_A] dpdiod_A_Device_97 psd[PLUS] wel[MINUS] 
+model=diode[DIONW_LL],DIONW_LL
+dfiimodel=diode[DIONW_LL],DIONW_LL#20ivpcell
+element diode[DIONW_LL] dnwdiod_DIODE_98 PSUB wel 
+model=diode[DIODNW_LL],DIODNW_LL
+dfiimodel=diode[DIODNW_LL],DIODNW_LL
+element diode[DIODNW_LL] dnwdiodd_DIODE_99 PSUB wel 
+model=diode[DIODP_LL],DIODP_LL
+dfiimodel=diode[DIODP_LL],DIODP_LL
+element diode[DIODP_LL] dpdiodd_DIODE_100 TWELL wel 
+model=bjt[PNP_V20X20_LL],PNP_V20X20_LL
+dfiimodel=bjt[PNP_V20X20_LL],PNP_V20X20_LL
+element bjt[PNP_V20X20_LL] PNPBJT20_BJT_101 PSUB wel PNP_E_20 
+model=bjt[PNP_V32X32_LL],PNP_V32X32_LL
+dfiimodel=bjt[PNP_V32X32_LL],PNP_V32X32_LL
+element bjt[PNP_V32X32_LL] PNPBJT32_BJT_102 PSUB wel PNP_E_32 
+model=bjt[PNP_V50X50_LL],PNP_V50X50_LL
+dfiimodel=bjt[PNP_V50X50_LL],PNP_V50X50_LL
+element bjt[PNP_V50X50_LL] PNPBJT50_BJT_103 PSUB wel PNP_E_50 
+model=bjt[PNP_V100X100_LL],PNP_V100X100_LL
+dfiimodel=bjt[PNP_V100X100_LL],PNP_V100X100_LL
+element bjt[PNP_V100X100_LL] PNPBJT100_BJT_104 PSUB wel PNP_E_100 
+model=bjt[NPN_V20X20_LL],NPN_V20X20_LL
+dfiimodel=bjt[NPN_V20X20_LL],NPN_V20X20_LL
+element bjt[NPN_V20X20_LL] NPNBJT20_BJT_105 wel TWELL NPN_E_20 
+model=bjt[NPN_V32X32_LL],NPN_V32X32_LL
+dfiimodel=bjt[NPN_V32X32_LL],NPN_V32X32_LL
+element bjt[NPN_V32X32_LL] NPNBJT32_BJT_106 wel TWELL NPN_E_32 
+model=bjt[NPN_V50X50_LL],NPN_V50X50_LL
+dfiimodel=bjt[NPN_V50X50_LL],NPN_V50X50_LL
+element bjt[NPN_V50X50_LL] NPNBJT50_BJT_107 wel TWELL NPN_E_50 
+model=bjt[NPN_V100X100_LL],NPN_V100X100_LL
+dfiimodel=bjt[NPN_V100X100_LL],NPN_V100X100_LL
+element bjt[NPN_V100X100_LL] NPNBJT100_BJT_108 wel TWELL NPN_E_100 
+model=generic[NCAP_12_LL],NCAP_12_LL
+dfiimodel=generic[NCAP_12_LL],NCAP_12_LL#20ivpcell
+element generic[NCAP_12_LL] NCAPGATE_12_Device_109 PLY[PLUS] wel[MINUS] 
+model=generic[NCAP_25_LL],NCAP_25_LL
+dfiimodel=generic[NCAP_25_LL],NCAP_25_LL#20ivpcell
+element generic[NCAP_25_LL] NCAPGATE_18_Device_110 PLY[PLUS] wel[MINUS] 
+model=generic[PCAP_12_LL],PCAP_12_LL
+dfiimodel=generic[PCAP_12_LL],PCAP_12_LL#20ivpcell
+element generic[PCAP_12_LL] PCAPGATE_12_PSUB_Device_111 PLY[PLUS] PSUB[MINUS] 
+model=generic[PCAP_12_LL_av2],PCAP_12_LL
+dfiimodel=generic[PCAP_12_LL_av2],PCAP_12_LL#20ivpcell
+element generic[PCAP_12_LL_av2] PCAPGATE_12_TWELL_Device_112 PLY[PLUS] TWELL[MINUS] 
+model=generic[PCAP_25_LL],PCAP_25_LL
+dfiimodel=generic[PCAP_25_LL],PCAP_25_LL#20ivpcell
+element generic[PCAP_25_LL] PCAPGATE_18_PSUB_Device_113 PLY[PLUS] PSUB[MINUS] 
+model=generic[PCAP_25_LL_av2],PCAP_25_LL
+dfiimodel=generic[PCAP_25_LL_av2],PCAP_25_LL#20ivpcell
+element generic[PCAP_25_LL_av2] PCAPGATE_18_TWELL_Device_114 PLY[PLUS] TWELL[MINUS] 
+model=generic[MOMCAPS_SY_MMKF],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF] MOMVP1_MM_1_P_Device_115 MOMVP1_MM_1_term[PLUS] MOMVP1_MM_1_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av2],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av2],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av2] MOMVP1_MM_1_W_Device_116 MOMVP1_MM_1_term[PLUS] MOMVP1_MM_1_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av3],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av3],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av3] MOMVP1_MM_1_T_Device_117 MOMVP1_MM_1_term[PLUS] MOMVP1_MM_1_term[MINUS] TWELL[B] 
+model=generic[MOMCAPS_AS_MMKF],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF] MOMVP2_MM_1_P_Device_118 MOMVP2_MM_1_term_p[PLUS] MOMVP2_MM_1_term_m[MINUS] PSUB[B] 
+model=generic[MOMCAPS_AS_MMKF_av2],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av2],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av2] MOMVP2_MM_1_W_Device_119 MOMVP2_MM_1_term_p[PLUS] MOMVP2_MM_1_term_m[MINUS] wel[B] 
+model=generic[MOMCAPS_AS_MMKF_av3],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av3],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av3] MOMVP2_MM_1_T_Device_120 MOMVP2_MM_1_term_p[PLUS] MOMVP2_MM_1_term_m[MINUS] TWELL[B] 
+model=generic[MOMCAPS_SY_MMKF_av4],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av4],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av4] MOMVP1_MM_2_P_Device_121 MOMVP1_MM_2_term[PLUS] MOMVP1_MM_2_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av5],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av5],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av5] MOMVP1_MM_2_W_Device_122 MOMVP1_MM_2_term[PLUS] MOMVP1_MM_2_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av6],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av6],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av6] MOMVP1_MM_2_T_Device_123 MOMVP1_MM_2_term[PLUS] MOMVP1_MM_2_term[MINUS] TWELL[B] 
+model=generic[MOMCAPS_SY_MMKF_av7],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av7],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av7] MOMVP1_MM_SH2_P_Device_124 MOMVP1_MM_2_term[PLUS] MOMVP1_MM_2_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av8],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av8],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av8] MOMVP1_MM_SH2_W_Device_125 MOMVP1_MM_2_term[PLUS] MOMVP1_MM_2_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av9],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av9],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av9] MOMVP1_MM_SH2_T_Device_126 MOMVP1_MM_2_term[PLUS] MOMVP1_MM_2_term[MINUS] TWELL[B] 
+model=generic[MOMCAPS_AS_MMKF_av4],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av4],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av4] MOMVP2_MM_2_P_Device_127 MOMVP2_MM_2_term_p[PLUS] MOMVP2_MM_2_term_m[MINUS] PSUB[B] 
+model=generic[MOMCAPS_AS_MMKF_av5],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av5],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av5] MOMVP2_MM_2_W_Device_128 MOMVP2_MM_2_term_p[PLUS] MOMVP2_MM_2_term_m[MINUS] wel[B] 
+model=generic[MOMCAPS_AS_MMKF_av6],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av6],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av6] MOMVP2_MM_2_T_Device_129 MOMVP2_MM_2_term_p[PLUS] MOMVP2_MM_2_term_m[MINUS] TWELL[B] 
+model=generic[MOMCAPS_SY_MMKF_av10],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av10],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av10] MOMVP1_MM_3_P_Device_130 MOMVP1_MM_3_term[PLUS] MOMVP1_MM_3_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av11],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av11],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av11] MOMVP1_MM_3_W_Device_131 MOMVP1_MM_3_term[PLUS] MOMVP1_MM_3_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av12],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av12],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av12] MOMVP1_MM_3_T_Device_132 MOMVP1_MM_3_term[PLUS] MOMVP1_MM_3_term[MINUS] TWELL[B] 
+model=generic[MOMCAPS_SY_MMKF_av13],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av13],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av13] MOMVP1_MM_SH3_P_Device_133 MOMVP1_MM_3_term[PLUS] MOMVP1_MM_3_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av14],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av14],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av14] MOMVP1_MM_SH3_W_Device_134 MOMVP1_MM_3_term[PLUS] MOMVP1_MM_3_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av15],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av15],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av15] MOMVP1_MM_SH3_T_Device_135 MOMVP1_MM_3_term[PLUS] MOMVP1_MM_3_term[MINUS] TWELL[B] 
+model=generic[MOMCAPS_AS_MMKF_av7],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av7],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av7] MOMVP2_MM_3_P_Device_136 MOMVP2_MM_3_term_p[PLUS] MOMVP2_MM_3_term_m[MINUS] PSUB[B] 
+model=generic[MOMCAPS_AS_MMKF_av8],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av8],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av8] MOMVP2_MM_3_W_Device_137 MOMVP2_MM_3_term_p[PLUS] MOMVP2_MM_3_term_m[MINUS] wel[B] 
+model=generic[MOMCAPS_AS_MMKF_av9],MOMCAPS_AS_MMKF
+dfiimodel=generic[MOMCAPS_AS_MMKF_av9],MOMCAPS_AS_MMKF#20ivpcell
+element generic[MOMCAPS_AS_MMKF_av9] MOMVP2_MM_3_T_Device_138 MOMVP2_MM_3_term_p[PLUS] MOMVP2_MM_3_term_m[MINUS] TWELL[B] 
+model=generic[MOMCAPS_SY_MMKF_av16],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av16],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av16] MOMVP1_MM_4_P_Device_139 MOMVP1_MM_4_term[PLUS] MOMVP1_MM_4_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av17],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av17],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av17] MOMVP1_MM_4_W_Device_140 MOMVP1_MM_4_term[PLUS] MOMVP1_MM_4_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av18],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av18],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av18] MOMVP1_MM_4_T_Device_141 MOMVP1_MM_4_term[PLUS] MOMVP1_MM_4_term[MINUS] TWELL[B] 
+model=generic[MOMCAPS_SY_MMKF_av19],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av19],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av19] MOMVP1_MM_SH4_P_Device_142 MOMVP1_MM_4_term[PLUS] MOMVP1_MM_4_term[MINUS] PSUB[B] 
+model=generic[MOMCAPS_SY_MMKF_av20],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av20],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av20] MOMVP1_MM_SH4_W_Device_143 MOMVP1_MM_4_term[PLUS] MOMVP1_MM_4_term[MINUS] wel[B] 
+model=generic[MOMCAPS_SY_MMKF_av21],MOMCAPS_SY_MMKF
+dfiimodel=generic[MOMCAPS_SY_MMKF_av21],MOMCAPS_SY_MMKF#20ivpcell
+element generic[MOMCAPS_SY_MMKF_av21] MOMVP1_MM_SH4_T_Device_144 MOMVP1_MM_4_term[PLUS] MOMVP1_MM_4_term[MINUS] TWELL[B] 
+model=generic[momcaps_symesh_mmkf],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf] MOM_MESH_SY_1_P_Device_145 MOM2_MESH_SY_P1_term[PLUS1] MOM3_MESH_SY_M1_term[MINUS1] MOM2_MESH_SY_P2_term[PLUS2] MOM3_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av2],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av2],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av2] MOM_MESH_SY_1_W_Device_146 MOM2_MESH_SY_P1_term[PLUS1] MOM3_MESH_SY_M1_term[MINUS1] MOM2_MESH_SY_P2_term[PLUS2] MOM3_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av3],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av3],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av3] MOM_MESH_SY_1_T_Device_147 MOM2_MESH_SY_P1_term[PLUS1] MOM3_MESH_SY_M1_term[MINUS1] MOM2_MESH_SY_P2_term[PLUS2] MOM3_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_asmesh_mmkf],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf] MOM_MESH_ASY_1_P_Device_148 MOM3_MESH_ASY_P1_term[PLUS1] MOM2_MESH_ASY_M1_term[MINUS1] MOM3_MESH_ASY_P2_term[PLUS2] MOM2_MESH_ASY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_asmesh_mmkf_av2],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av2],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av2] MOM_MESH_ASY_1_W_Device_149 MOM3_MESH_ASY_P1_term[PLUS1] MOM2_MESH_ASY_M1_term[MINUS1] MOM3_MESH_ASY_P2_term[PLUS2] MOM2_MESH_ASY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_asmesh_mmkf_av3],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av3],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av3] MOM_MESH_ASY_1_T_Device_150 MOM3_MESH_ASY_P1_term[PLUS1] MOM2_MESH_ASY_M1_term[MINUS1] MOM3_MESH_ASY_P2_term[PLUS2] MOM2_MESH_ASY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_symesh_mmkf_av4],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av4],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av4] MOM_MESH_SY_2_P_Device_151 MOM3_MESH_SY_P1_term[PLUS1] MOM4_MESH_SY_M1_term[MINUS1] MOM3_MESH_SY_P2_term[PLUS2] MOM4_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av5],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av5],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av5] MOM_MESH_SY_2_W_Device_152 MOM3_MESH_SY_P1_term[PLUS1] MOM4_MESH_SY_M1_term[MINUS1] MOM3_MESH_SY_P2_term[PLUS2] MOM4_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av6],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av6],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av6] MOM_MESH_SY_2_T_Device_153 MOM3_MESH_SY_P1_term[PLUS1] MOM4_MESH_SY_M1_term[MINUS1] MOM3_MESH_SY_P2_term[PLUS2] MOM4_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_symesh_mmkf_av7],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av7],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av7] MOM_MESH_SY_SH2_P_Device_154 MOM3_MESH_SY_P1_term[PLUS1] MOM4_MESH_SY_M1_term[MINUS1] MOM3_MESH_SY_P2_term[PLUS2] MOM4_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av8],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av8],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av8] MOM_MESH_SY_SH2_W_Device_155 MOM3_MESH_SY_P1_term[PLUS1] MOM4_MESH_SY_M1_term[MINUS1] MOM3_MESH_SY_P2_term[PLUS2] MOM4_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av9],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av9],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av9] MOM_MESH_SY_SH2_T_Device_156 MOM3_MESH_SY_P1_term[PLUS1] MOM4_MESH_SY_M1_term[MINUS1] MOM3_MESH_SY_P2_term[PLUS2] MOM4_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_asmesh_mmkf_av4],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av4],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av4] MOM_MESH_ASY_2_P_Device_157 MOM4_MESH_ASY_P1_term[PLUS1] MOM3_MESH_ASY_M1_term[MINUS1] MOM4_MESH_ASY_P2_term[PLUS2] MOM3_MESH_ASY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_asmesh_mmkf_av5],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av5],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av5] MOM_MESH_ASY_2_W_Device_158 MOM4_MESH_ASY_P1_term[PLUS1] MOM3_MESH_ASY_M1_term[MINUS1] MOM4_MESH_ASY_P2_term[PLUS2] MOM3_MESH_ASY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_asmesh_mmkf_av6],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av6],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av6] MOM_MESH_ASY_2_T_Device_159 MOM4_MESH_ASY_P1_term[PLUS1] MOM3_MESH_ASY_M1_term[MINUS1] MOM4_MESH_ASY_P2_term[PLUS2] MOM3_MESH_ASY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_symesh_mmkf_av10],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av10],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av10] MOM_MESH_SY_3_P_Device_160 MOM4_MESH_SY_P1_term[PLUS1] MOM5_MESH_SY_M1_term[MINUS1] MOM4_MESH_SY_P2_term[PLUS2] MOM5_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av11],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av11],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av11] MOM_MESH_SY_3_W_Device_161 MOM4_MESH_SY_P1_term[PLUS1] MOM5_MESH_SY_M1_term[MINUS1] MOM4_MESH_SY_P2_term[PLUS2] MOM5_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av12],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av12],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av12] MOM_MESH_SY_3_T_Device_162 MOM4_MESH_SY_P1_term[PLUS1] MOM5_MESH_SY_M1_term[MINUS1] MOM4_MESH_SY_P2_term[PLUS2] MOM5_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_symesh_mmkf_av13],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av13],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av13] MOM_MESH_SY_SH3_P_Device_163 MOM4_MESH_SY_P1_term[PLUS1] MOM5_MESH_SY_M1_term[MINUS1] MOM4_MESH_SY_P2_term[PLUS2] MOM5_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av14],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av14],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av14] MOM_MESH_SY_SH3_W_Device_164 MOM4_MESH_SY_P1_term[PLUS1] MOM5_MESH_SY_M1_term[MINUS1] MOM4_MESH_SY_P2_term[PLUS2] MOM5_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av15],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av15],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av15] MOM_MESH_SY_SH3_T_Device_165 MOM4_MESH_SY_P1_term[PLUS1] MOM5_MESH_SY_M1_term[MINUS1] MOM4_MESH_SY_P2_term[PLUS2] MOM5_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_asmesh_mmkf_av7],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av7],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av7] MOM_MESH_ASY_3_P_Device_166 MOM5_MESH_ASY_P1_term[PLUS1] MOM4_MESH_ASY_M1_term[MINUS1] MOM5_MESH_ASY_P2_term[PLUS2] MOM4_MESH_ASY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_asmesh_mmkf_av8],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av8],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av8] MOM_MESH_ASY_3_W_Device_167 MOM5_MESH_ASY_P1_term[PLUS1] MOM4_MESH_ASY_M1_term[MINUS1] MOM5_MESH_ASY_P2_term[PLUS2] MOM4_MESH_ASY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_asmesh_mmkf_av9],momcaps_asmesh_mmkf
+dfiimodel=generic[momcaps_asmesh_mmkf_av9],MOMCAPS_ASMESH_MMKF#20ivpcell
+element generic[momcaps_asmesh_mmkf_av9] MOM_MESH_ASY_3_T_Device_168 MOM5_MESH_ASY_P1_term[PLUS1] MOM4_MESH_ASY_M1_term[MINUS1] MOM5_MESH_ASY_P2_term[PLUS2] MOM4_MESH_ASY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_symesh_mmkf_av16],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av16],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av16] MOM_MESH_SY_4_P_Device_169 MOM5_MESH_SY_P1_term[PLUS1] MOM6_MESH_SY_M1_term[MINUS1] MOM5_MESH_SY_P2_term[PLUS2] MOM6_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av17],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av17],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av17] MOM_MESH_SY_4_W_Device_170 MOM5_MESH_SY_P1_term[PLUS1] MOM6_MESH_SY_M1_term[MINUS1] MOM5_MESH_SY_P2_term[PLUS2] MOM6_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av18],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av18],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av18] MOM_MESH_SY_4_T_Device_171 MOM5_MESH_SY_P1_term[PLUS1] MOM6_MESH_SY_M1_term[MINUS1] MOM5_MESH_SY_P2_term[PLUS2] MOM6_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_symesh_mmkf_av19],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av19],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av19] MOM_MESH_SY_SH4_P_Device_172 MOM5_MESH_SY_P1_term[PLUS1] MOM6_MESH_SY_M1_term[MINUS1] MOM5_MESH_SY_P2_term[PLUS2] MOM6_MESH_SY_M2_term[MINUS2] PSUB[B] 
+model=generic[momcaps_symesh_mmkf_av20],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av20],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av20] MOM_MESH_SY_SH4_W_Device_173 MOM5_MESH_SY_P1_term[PLUS1] MOM6_MESH_SY_M1_term[MINUS1] MOM5_MESH_SY_P2_term[PLUS2] MOM6_MESH_SY_M2_term[MINUS2] wel[B] 
+model=generic[momcaps_symesh_mmkf_av21],momcaps_symesh_mmkf
+dfiimodel=generic[momcaps_symesh_mmkf_av21],MOMCAPS_SYMESH_MMKF#20ivpcell
+element generic[momcaps_symesh_mmkf_av21] MOM_MESH_SY_SH4_T_Device_174 MOM5_MESH_SY_P1_term[PLUS1] MOM6_MESH_SY_M1_term[MINUS1] MOM5_MESH_SY_P2_term[PLUS2] MOM6_MESH_SY_M2_term[MINUS2] TWELL[B] 
+model=generic[momcaps_array_vp3_rfvcl],momcaps_array_vp3_rfvcl
+dfiimodel=generic[momcaps_array_vp3_rfvcl],MOMCAPS_Array_VP3_RFVCL#20ivpcell
+element generic[momcaps_array_vp3_rfvcl] MOM_ARRAY_VP3_RFVCL_1_Device_175 VP3_ME3_1[PLUS] VP3_ME2_1[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp3_rfvcl_av2],momcaps_array_vp3_rfvcl
+dfiimodel=generic[momcaps_array_vp3_rfvcl_av2],MOMCAPS_Array_VP3_RFVCL#20ivpcell
+element generic[momcaps_array_vp3_rfvcl_av2] MOM_ARRAY_VP3_RFVCL_2_Device_176 VP3_ME3_2[PLUS] VP3_ME2_2[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp3_rfvcl_av3],momcaps_array_vp3_rfvcl
+dfiimodel=generic[momcaps_array_vp3_rfvcl_av3],MOMCAPS_Array_VP3_RFVCL#20ivpcell
+element generic[momcaps_array_vp3_rfvcl_av3] MOM_ARRAY_VP3_RFVCL_3_Device_177 VP3_ME4_3[PLUS] VP3_ME3_3[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp3_rfvcl_av4],momcaps_array_vp3_rfvcl
+dfiimodel=generic[momcaps_array_vp3_rfvcl_av4],MOMCAPS_Array_VP3_RFVCL#20ivpcell
+element generic[momcaps_array_vp3_rfvcl_av4] MOM_ARRAY_VP3_RFVCL_4_Device_178 VP3_ME5_4[PLUS] VP3_ME4_4[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp4_rfvcl],momcaps_array_vp4_rfvcl
+dfiimodel=generic[momcaps_array_vp4_rfvcl],MOMCAPS_Array_VP4_RFVCL#20ivpcell
+element generic[momcaps_array_vp4_rfvcl] MOM_ARRAY_VP4_RFVCL_1_Device_179 VP4_ME3_1[PLUS] VP4_ME2_1[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp4_rfvcl_av2],momcaps_array_vp4_rfvcl
+dfiimodel=generic[momcaps_array_vp4_rfvcl_av2],MOMCAPS_Array_VP4_RFVCL#20ivpcell
+element generic[momcaps_array_vp4_rfvcl_av2] MOM_ARRAY_VP4_RFVCL_2_Device_180 VP4_ME3_2[PLUS] VP4_ME2_2[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp4_rfvcl_av3],momcaps_array_vp4_rfvcl
+dfiimodel=generic[momcaps_array_vp4_rfvcl_av3],MOMCAPS_Array_VP4_RFVCL#20ivpcell
+element generic[momcaps_array_vp4_rfvcl_av3] MOM_ARRAY_VP4_RFVCL_3_Device_181 VP4_ME4_3[PLUS] VP4_ME3_3[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp4_rfvcl_av4],momcaps_array_vp4_rfvcl
+dfiimodel=generic[momcaps_array_vp4_rfvcl_av4],MOMCAPS_Array_VP4_RFVCL#20ivpcell
+element generic[momcaps_array_vp4_rfvcl_av4] MOM_ARRAY_VP4_RFVCL_4_Device_182 VP4_ME5_4[PLUS] VP4_ME4_4[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[momcaps_array_vp5_rfvcl],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl] MOM_ARRAY_VP5_RFVCL_SH1_P1_Device_183 VP5_ME3_1[PLUS] VP5_ME2_1[MINUS] PLY[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av2],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av2],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av2] MOM_ARRAY_VP5_RFVCL_SH2_P1_Device_184 VP5_ME3_2[PLUS] VP5_ME2_2[MINUS] PLY[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av3],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av3],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av3] MOM_ARRAY_VP5_RFVCL_SH2_M1_Device_185 VP5_ME3_2[PLUS] VP5_ME2_2[MINUS] M1[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av4],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av4],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av4] MOM_ARRAY_VP5_RFVCL_SH3_P1_Device_186 VP5_ME4_3[PLUS] VP5_ME3_3[MINUS] PLY[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av5],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av5],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av5] MOM_ARRAY_VP5_RFVCL_SH3_M1_Device_187 VP5_ME4_3[PLUS] VP5_ME3_3[MINUS] M1[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av6],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av6],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av6] MOM_ARRAY_VP5_RFVCL_SH3_M2_Device_188 VP5_ME4_3[PLUS] VP5_ME3_3[MINUS] M2[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av7],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av7],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av7] MOM_ARRAY_VP5_RFVCL_SH4_P1_Device_189 VP5_ME5_4[PLUS] VP5_ME4_4[MINUS] PLY[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av8],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av8],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av8] MOM_ARRAY_VP5_RFVCL_SH4_M1_Device_190 VP5_ME5_4[PLUS] VP5_ME4_4[MINUS] M1[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av9],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av9],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av9] MOM_ARRAY_VP5_RFVCL_SH4_M2_Device_191 VP5_ME5_4[PLUS] VP5_ME4_4[MINUS] M2[SUB] 
+model=generic[momcaps_array_vp5_rfvcl_av10],momcaps_array_vp5_rfvcl
+dfiimodel=generic[momcaps_array_vp5_rfvcl_av10],MOMCAPS_Array_VP5_RFVCL#20ivpcell
+element generic[momcaps_array_vp5_rfvcl_av10] MOM_ARRAY_VP5_RFVCL_SH4_M3_Device_192 VP5_ME5_4[PLUS] VP5_ME4_4[MINUS] M3[SUB] 
+model=generic[l_slcr8k_rfvil],l_slcr8k_rfvil
+dfiimodel=generic[l_slcr8k_rfvil],L_SLCR8K_RFVIL#20ivpcell
+element generic[l_slcr8k_rfvil] N_IND_CR_P_Device_193 M9[PLUS] M8[MINUS] PSUB[PSUB] 
+model=generic[l_syct8k_rfvil],l_syct8k_rfvil
+dfiimodel=generic[l_syct8k_rfvil],L_SYCT8K_RFVIL#20ivpcell
+element generic[l_syct8k_rfvil] N_IND_SYC_P_Device_194 M10[PLUS] M10[MINUS] M8[CT] PSUB[PSUB] 
+model=generic[l_sy8k_rfvil],l_sy8k_rfvil
+dfiimodel=generic[l_sy8k_rfvil],L_SY8K_RFVIL#20ivpcell
+element generic[l_sy8k_rfvil] N_IND_SY_P_Device_195 M10[PLUS] M10[MINUS] PSUB[PSUB] 
+model=generic[l_sqsk_rfvil],l_sqsk_rfvil
+dfiimodel=generic[l_sqsk_rfvil],L_SQSK_RFVIL#20ivpcell
+element generic[l_sqsk_rfvil] N_IND_SQ_P_Device_196 Lterm2[PLUS] Lterm1[MINUS] PSUB[PSUB] 
+connect M1_MIM M1
+model=generic[mimcaps_20f_nwell_rfkf],mimcaps_20f_nwell_rfkf
+dfiimodel=generic[mimcaps_20f_nwell_rfkf],MIMCAPS_20F_NWELL_RFKF#20ivpcell
+element generic[mimcaps_20f_nwell_rfkf] RF_CMMC_RFNW_Device_197 MMCTP[PLUS] MMCBP[MINUS] wel[NW] PSUB[PSUB] 
+model=generic[mimcaps_20f_psub_rfkf],mimcaps_20f_psub_rfkf
+dfiimodel=generic[mimcaps_20f_psub_rfkf],MIMCAPS_20F_PSUB_RFKF#20ivpcell
+element generic[mimcaps_20f_psub_rfkf] CMMC_NT_Device_198 MMCTP[PLUS] MMCBP[MINUS] PSUB[PSUB] 
+model=generic[mimcaps_20f_m1_rfkf],mimcaps_20f_m1_rfkf
+dfiimodel=generic[mimcaps_20f_m1_rfkf],MIMCAPS_20F_M1_RFKF#20ivpcell
+element generic[mimcaps_20f_m1_rfkf] CMMC_RF3_Device_199 MMCTP[PLUS] MMCBP[MINUS] M1[PSUB] 
+model=cap[mimcaps_20f_mm],mimcaps_20f_mm
+dfiimodel=cap[mimcaps_20f_mm],MIMCAPS_20F_MM#20ivpcell
+element cap[mimcaps_20f_mm] CMMC_RF2_CAP_200 MMCTP MMCBP 
+model=generic[pad_rf],pad_rf
+dfiimodel=generic[pad_rf],PAD_RF#20ivpcell
+element generic[pad_rf] p_rf_pad_Device_201 AL_RDL[PLUS] PSUB[PSUB] 
+layer MESTACK123
+layer MESTACK234
+layer MESTACK345
+layer MESTACK456
+layer MESTACK1234
+layer MESTACK2345
+layer MESTACK3456
+layer MESTACK12345
+layer MESTACK23456
+layer MESTACK123456
+layer RFSYMBOL
+layer PCAPGATE_12
+layer PCAPGATE_18

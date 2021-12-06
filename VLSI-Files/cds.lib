@@ -1,0 +1,12 @@
+include /users/share/vlsi1/umc_65ll/Designkits/Cadence_6.1/cds.lib
+DEFINE analogLib $CDS_IC/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE sample $CDS_IC/tools/dfII/samples/cdslib/sample
+DEFINE basic $CDS_IC/tools/dfII/etc/cdslib/basic
+include /users/share/vlsi1/CeidStd/ceid_umc65ll/virtuoso/cds.lib
+
+DEFINE avTech /eda/cadence/2015-16/RHELx86/ASSURA_04.14.124_IC616OA/tools/assura/etc/avtech/avTech
+#Removed by ddDeleteObj: DEFINE MyDesignLib /localdisk/users/vlsi1-u12/cadence/MyDesignLib
+DEFINE MyDesignLib /localdisk/users/vlsi1-u12/cadence/MyDesignLib
+DEFINE MyDesignlib /localdisk/users/vlsi1-u12/cadence/MyDesignlib
+DEFINE MyDesignLibrary /localdisk/users/vlsi1-u12/cadence/MyDesignLibrary
+DEFINE exam_4348 /localdisk/users/vlsi1-u12/cadence/exam_4348

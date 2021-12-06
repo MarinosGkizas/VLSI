@@ -1,0 +1,14 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.6 - CAT33 07/09/2015 16:05 (sjfnl733) $
+\o Sub version:		sub-version  s018 
+\o Arguments:		-cdslib /localdisk/users/vlsi1-u12/cadence/cds.lib -mpssession virtuoso16440 -mpshost vlsi-lab06.ceid.upatras.gr 
+\o Working Directory:	vlsi-lab06.ceid.upatras.gr:/localdisk/users/vlsi1-u12/cadence
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.7.2
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "cdsDefTechLib"
+\a nrResizeWindow(cdsLibEditor list(0 56 500 400))
+\a cdsLibEditor->fileExitButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

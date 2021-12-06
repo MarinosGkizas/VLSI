@@ -1,0 +1,3 @@
+!<alc> v1 24
+0    3    0 NAND layout MyDesignLib
+0    4    0 XOR_1 layout MyDesignLib

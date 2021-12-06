@@ -1,0 +1,5 @@
+"P_12_LLRVT(MOS)" "P_12_LLRVT(MOS)"
+"N_12_LLRVT(MOS)" "N_12_LLRVT(MOS)"
+"NAND layout MyDesignLib" "NAND schematic MyDesignLib" "P_12_LLRVT(MOS)" "N_12_LLRVT(MOS)"
+"XOR_1 layout MyDesignLib" "XOR_1 schematic MyDesignLib"
+Devices filtered from layout

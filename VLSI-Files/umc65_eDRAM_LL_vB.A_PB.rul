@@ -1,0 +1,197 @@
+;///////////////////////////////////////////////////////////////////////////
+; ** UMC 65nm eDRAM RULE Version A.D PB
+;///////////////////////////////////////////////////////////////////////////
+;
+;Note: The DRC for eDRAM are based on the version of eDRAM TLR
+;      CFAS Doc No. SCLN-6MWFLM
+;///////////////////////////////////////////////////////////////////////////
+; revision  date           who              changes                       //
+;========= ============ ========== =======================================//
+
+;  A.E_PB   09/01/2007   Johnson    1. New Create		            //
+
+;///////////////////////////////////////////////////////////////////////////
+
+
+
+;=======================
+;==== DT layer RULE ====
+;=======================
+
+
+eeDRAM_DT_S = geomOr( drc( DT sepNotch < 0.13 shielded withIntersection ) geomSize( drc( DT sepNotch < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_DT_S "eDRAM_DT.S: Minimum spacing of DT to DT is 0.13um")
+
+
+eeDRAM_DF_DT_OL_X = geomOr( drc( DIFF DT ovlp == 0.103 ))
+eeDRAM_DF_DT_OL_Y = geomOr( drc( DIFF DT ovlp  < 0.115 withIntersection shielded ) geomSize( drc( DIFF DT ovlp < 0.01 edge ) -0.001 edges ) )
+eeDRAM_DF_DT_OL   = geomAndNot( eeDRAM_DF_DT_OL_Y geomButtOrOver( eeDRAM_DF_DT_OL_Y eeDRAM_DF_DT_OL_X))
+errorLayer(eeDRAM_DF_DT_OL "eDRAM_DF_DT.OL: DIFFUSION overlap of DT should be 0.103 or >= 0.115um")
+
+
+eeDRAM_DT_DF_OH = geomOr( drc( DT DIFF enc < 0.025 shielded withIntersection ) geomSize( drc( DT DIFF enc < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_DT_DF_OH "eDRAM_DT_DF.OH: Minimum DT overhang of DIFFUSION is 0.025um")
+
+eeDRAM_DF_DT_S = geomOr( drc( DIFF DT sep < 0.085 withIntersection shielded ) geomSize( drc( DIFF DT sep < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_DF_DT_S "eDRAM_DF_DT.S: Minimum sapcing of DIFFUSION to adjacent DT is 0.085um")
+
+
+eeDRAM_DT_R1 = geomAnd(geomAndNot( DT AW ) URAMMK)
+errorLayer(eeDRAM_DT_R1 "eDRAM_DT.R1: DT must be within A_WELL")
+
+
+
+;===========================
+;==== A_WELL layer RULE ====
+;===========================
+
+eeDRAM_AW_W1 = geomOr( drc( AW width < 0.9 ) geomSize( drc( AW width < 0.01 withCornerTouch edge ) -0.001 edges ) )
+errorLayer(eeDRAM_AW_W1 "eDRAM_AW.W1: Minimum A_WELL width is 0.9um")
+
+eeDRAM_AW_S1 = geomOr( drc( AW sepNotch < 0.9 shielded withIntersection ) geomSize( drc( AW sepNotch < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_AW_S1 "eDRAM_AW.S1: Minimum spacing of A_WELL is 0.9um")
+
+eeDRAM_AW_NW_S2 = geomOr( drc( NWEL AW 0 < sep < 3.0 withIntersection withSingularPoint shielded ))
+errorLayer(eeDRAM_AW_NW_S2 "eDRAM_AW_NW.S2: Minimum spacing of N_WELL to A_WELL is 0 or 3.0um")
+
+eeDRAM_NW_AW_OH1 = geomOr( drc( NWEL AW enc < 1 withIntersection withSingularPoint ))
+errorLayer(eeDRAM_NW_AW_OH1 "eDRAM_NW_AW.OH1: N_WELL overhang of A_WELL is 1.0um")
+
+eeDRAM_AW_P_DF_EN2 = geomOr( drc( AW PDIFF enc < 0.2 shielded withIntersection ) geomStraddle( PDIFF AW ) geomSize( drc( AW PDIFF enc < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_AW_P_DF_EN2 "eDRAM_AW_P_DF.EN2: Minimum A_WELL enclosure of P+ DIFFUSION is 0.2um")
+
+eeDRAM_AW_DNW_S3 = geomOr( drc( AW DNW 0 < sep < 5 shielded ) geomSize( drc( AW DNW sep < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_AW_DNW_S3 "eDRAM_AW_DNW.S3: Minimum spacing of AW to DNW outside AW is 5um")
+
+eeDRAM_AW_N_DF_S4 = geomOr( drc( AW NDIF 0 < sep < 0.8 shielded ) geomSize( drc( AW NDIF sep < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_AW_N_DF_S4 "eDRAM_AW_N_DF.S4: Minimum spacing of AW to N+DIFFUSION inside PW is 0.8um")
+
+eeDRAM_AW_R1_1 = geomGetVertex( AW keep > 4 )
+eeDRAM_AW_R1_2 = geomGetAngledEdge( AW 0 < keep < 90 )
+eeDRAM_AW_R1 = geomOr( eeDRAM_AW_R1_1 eeDRAM_AW_R1_2 )
+errorLayer(eeDRAM_AW_R1 "eDRAM_AW.R1: AW shapes must be orthogonal rectangles and have no inside corners")
+
+eeDRAM_AW_R3 = geomStraddle( DIFF AW )
+errorLayer(eeDRAM_AW_R3 "eDRAM_AW.R3: DIFFUSION overhang AW is not allowed ")
+
+eeDRAM_AW_R4 = geomStraddle( PPLUS AW )
+errorLayer(eeDRAM_AW_R4 "eDRAM_AW.R4: P+ overhang AW is not allowed")
+
+eeDRAM_AW_R5 = geomOutside( geomAnd( geomButtOrOver( DIFF GATE ) AW ) DT )
+errorLayer(eeDRAM_AW_R5 "eDRAM_AW.R5: Only DRAM Cell can exist AW. The other devices are not allowed in AW,  The DRC check if a gate diffusion without DT inside AW")
+
+
+;==============================
+;==== Cell Gate layer RULE ====
+;==============================
+
+eeDRAM_CG_W = geomOr( drc( CELLG width < 0.4 ) geomSize( drc( CELLG width < 0.01 withCornerTouch edge ) -0.001 edges ) )
+errorLayer(eeDRAM_CG_W "eDRAM_CG.W: Minimum CELLG width is 0.4um")
+
+
+eeDRAM_CG_S = geomOr( drc( CELLG sepNotch < 0.4 shielded withIntersection ) geomSize( drc( CELLG sepNotch < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_CG_S "eDRAM_CG.S: Minimum and notch of CELLG to CELLG is 0.4um")
+
+
+eeDRAM_CG_TG_S = geomAnd( CELLG TG )
+errorLayer(eeDRAM_CG_TG_S "eDRAM_CG_TG.S: Minimum spacing of CELLG to TG is 0um")
+
+
+eeDRAM_CG_GATE_E_S = geomOr( drc( CELLG GATE sep < 0.26 withIntersection shielded ) geomSize( drc( CELLG GATE sep < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_CG_GATE_E_S "eDRAM_CG_GATE_E.S: Minimum spacing of CELLG to Gate edge is 0.26um")
+
+
+eeDRAM_CG_GATE_C_S = geomOr( drc( geomGetEdge( CELLG inside DIFF ) GATE_W sep < 0.30 with_perp withIntersection shielded ) )
+errorLayer(eeDRAM_CG_GATE_C_S "eDRAM_CG_GATE_C.S: Minimum spacing of CELLG to gate channel is 0.30um")
+
+
+eeDRAM_CG_NW_OH = geomOr( drc( CELLG NWEL 0 < enc < 0.4 shielded withIntersection ) geomSize( drc( CELLG NWEL enc < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_CG_NW_OH "eDRAM_CG_NW.OH: Minimum CELLG overhang of N_WELL is 0 or 0.4um")
+
+
+eeDRAM_NW_CG_OH = geomOr( drc( NWEL CELLG enc < 0.4 shielded withIntersection ) geomSize( drc( NWEL CELLG enc < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_NW_CG_OH "eDRAM_NW_CG.OH: Minimum NWEL overhang of CELLG is 0.4um")
+
+
+eeDRAM_CG_NW_OL = geomOr( drc( CELLG NWEL 0.19 < ovlp < 0.4 shielded ) geomSize( drc( CELLG NWEL ovlp < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_CG_NW_OL "eDRAM_CG_NW.OL: Minimum CELLG overlap of N_WELL is 0.4um or less than 0.19um")
+
+
+eeDRAM_CG_GATE_E_EN = geomOr( drc( CELLG GATE enc < 0.26 shielded withIntersection ) geomSize( drc( CELLG GATE enc < 0.01 edge ) -0.001 edges ) )
+errorLayer(eeDRAM_CG_GATE_E_EN "eDRAM_CG_GATE_E.EN: Minimum CELLG enclosure of gate edge is 0.26um")
+
+
+eeDRAM_CG_GATE_C_EN = geomOr( drc( CELLG GATE_W enc < 0.30 withIntersection shielded ) )
+errorLayer(eeDRAM_CG_GATE_C_EN "eDRAM_CG_GATE_C.EN: Minimum CELLG enclosure of gate edge is 0.30um")
+
+
+eeDRAM_CG_R1_1 = geomAnd( CELLG TG )
+eeDRAM_CG_R1_2 = geomAnd( CELLG SAB )
+eeDRAM_CG_R1_3 = geomAnd( CELLG NATIVE )
+eeDRAM_CG_R1 = geomOr( eeDRAM_CG_R1_1 eeDRAM_CG_R1_2 eeDRAM_CG_R1_3 )
+errorLayer(eeDRAM_CG_R1 "eDRAM_CG.R1: CELLG over TG, SAB, NATIVE are not allowed")
+
+
+eeDRAM_CG_R2 = geomGetAngledEdge( CELLG 0 < keep < 90 )
+errorLayer(eeDRAM_CG_R2 "eDRAM_CG.R2: CELLG shapes must be orthogonal")
+
+
+
+
+;;
+;;==============================
+;;==== Bit Cell layout RULE ====
+;;==============================
+;; URAMMK / CAD_URAM_MARK 93(2)
+
+ URAM_DIFF = geomAnd( DIFF URAMMK)
+ URAM_PO1  = geomAnd( PO1 URAMMK) 
+ URAM_DT   = geomButtOrOver( DT URAMMK)
+ URAM_ME1  = geomAnd( ME1 URAMMK)
+ URAM_ME2  = geomAnd( ME2 URAMMK) 
+ URAM_CONT = geomButtOrOver( CONT URAMMK)
+ URAM_BC   = geomContactCheck( URAM_CONT width == 0.08 length == 0.135 ignore) 
+ URAM_SC   = geomAndNot( URAM_CONT URAM_BC)
+ 
+ URAM_WL   = geomOr( drc( geomGetAngledEdge( URAM_PO1  0 < ignore < 90 )  width == 0.13  opposite edge ))   
+ URAM_PWL  = geomOr( drc( geomGetAngledEdge( URAM_PO1  0 < ignore < 90 )  width == 0.05  opposite edge ))  
+
+
+eeDRAM_DF_W = geomOr( geomAndNot( URAM_DIFF drc( URAM_DIFF width == 0.09 ) ) )
+errorLayer(eeDRAM_DF_W "eDRAM_DF.W: Exact DIFFUSION width is 0.09 um")
+
+
+eeDRAM_BL_WL_S_X = drc( URAM_BC PO1 sep == 0.058 edgea)
+eeDRAM_BL_WL_S_Y = geomGetLength( eeDRAM_BL_WL_S_X keep == 0.9 )
+eeDRAM_BL_WL_S   = geomAndNot( URAM_BC geomButtOnly( URAM_BC geomEnclose( geomSize( URAM_BC  0.001 edges ) geomSize( eeDRAM_BL_WL_S_Y  0.001 edges ))))
+errorLayer(eeDRAM_BL_WL_S "eDRAM_BL_WL.S: Exact Bit Line CONTACT to Word Line space is 0.058 um")
+
+
+eeDRAM_WL_SC_S_X = drc( URAM_SC PO1 sep == 0.047 edgea)
+eeDRAM_WL_SC_S_Y = geomGetLength( eeDRAM_WL_SC_S_X keep == 0.08 )
+eeDRAM_WL_SC_S   = geomAndNot( URAM_SC geomButtOnly( URAM_SC geomEnclose( geomSize( URAM_SC  0.001 edges ) geomSize( eeDRAM_WL_SC_S_Y  0.001 edges ))))
+errorLayer(eeDRAM_WL_SC_S "eDRAM_WL_SC.S: Exact Word Line to SC space is 0.047 um")
+
+
+
+
+eeDRAM_SC_SZ   = geomContactCheck( URAM_BC width == 0.09 length == 0.09 ignore) 
+errorLayer(eeDRAM_SC_SZ "eDRAM_SC.SZ: Exact SC SIZE is 0.135* 0.08 um,Exact BC SIZE is  0.09* 0.09 um")
+
+eeDRAM_DT_SZ   = geomContactCheck( URAM_DT width == 0.14 length == 0.153 ignore) 
+errorLayer(eeDRAM_DT_SZ "eDRAM_DT.SZ: Exact DT size is 0.153*0.14 um")
+
+eeDRAM_MTL1_SZ   = geomContactCheck( URAM_ME1 width == 0.13 length == 0.34 ignore) 
+errorLayer(eeDRAM_MTL1_SZ "eDRAM_MTL1.SZ: Exact METAL1 island size is 0.34*0.13 um")
+
+
+eeDRAM_MTL2_W_A = geomOr( drc( URAM_ME2 width == 0.1 ) )
+eeDRAM_MTL2_W_B = geomOr( drc( URAM_ME2 width == 0.3 ) )
+eeDRAM_MTL2_W_C = geomOr(eeDRAM_MTL2_W_A eeDRAM_MTL2_W_B)
+eeDRAM_MTL2_W   = geomXor(eeDRAM_MTL2_W_C URAM_ME2)
+errorLayer(eeDRAM_MTL2_W "eDRAM_MTL2.W: Exact METAL2 width is 0.1 um or 0.3 um")
+
+; 
+; // Removed in official eDRAM rules
+
+
