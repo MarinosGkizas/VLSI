@@ -1,2 +1,0 @@
-Create a 2-input NAND with pmos width= 300nm and nmos width= 150nm .Channel length= 60nm. Simulate the gate.
-Create a 2-input NOR with the same specifications.
