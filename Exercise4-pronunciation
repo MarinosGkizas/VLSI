@@ -1,0 +1,3 @@
+i) Create the layout and run DRC,LVS for the inverter of exercise1.
+ii) Create the layout of an inverter with pmos channel width 2um and nmos channel with 1um. Both nmos and pmos should be designed with 2 fingers.
+iii) Create the layout of NAND and NOR gates of exercise 2.
