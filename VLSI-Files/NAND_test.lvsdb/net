@@ -1,0 +1,6 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 bind match unmatched shorts opens
+1 2 ((L "avC2_9"))
+1 1 ((L "avC10")((1 "N_12_LLRVT:SerMos2#1" ( "OUT" "OUT2"))(3 "N_12_LLRVT:SerMos2#1" ( "IN1" "IN2"))(1 "P_12_LLRVT:ParMos2#1" ( "OUT" "OUT2"))(3 "P_12_LLRVT:ParMos2#1" ( "IN1" "IN2")))(S "I12/net9")((1 "N_12_LLRVT:SerMos2#1" ( "OUT" "OUT2"))(2 "N_12_LLRVT:SerMos2#1" ( "IN1" "IN2"))(1 "P_12_LLRVT:ParMos2#1" ( "OUT" "OUT2"))(2 "P_12_LLRVT:ParMos2#1" ( "IN1" "IN2"))))

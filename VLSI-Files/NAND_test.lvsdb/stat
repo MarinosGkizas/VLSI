@@ -1,0 +1,5 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 filter reduce swap match
+1 3 ( ( "N_12_LLRVT" "N_12_LLRVT" "MOS" 0 0 0 0) ( "P_12_LLRVT" "P_12_LLRVT" "MOS" 0 0 0 0) ( "N_12_LLRVT:SerMos2#1" "N_12_LLRVT:SerMos2#1" "MosBlk" 11 11 0 0) ( "P_12_LLRVT:ParMos2#1" "P_12_LLRVT:ParMos2#1" "MosBlk" 11 11 0 0))
