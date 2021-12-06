@@ -1,1 +1,4 @@
-aa
+1)Create in CMOS logic with a pull-up network and a pull-down netwrok and in layout and schematic, the function F = (A · (B + C + D))'
+Connect the output with C and do transient analysis:
+i) For the values c=1f F, 20f F και 50f F
+ii) Run DC analysis when the output of the circuit only depends on fron the value of the input B
