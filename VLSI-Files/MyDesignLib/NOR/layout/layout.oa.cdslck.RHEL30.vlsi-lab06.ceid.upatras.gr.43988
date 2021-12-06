@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      vlsi1-u12
+HostName                       vlsi-lab06.ceid.upatras.gr
+ProcessIdentifier              43988
+ProcessCreationTime_UTC        1613655933
+ProcessCreationTime_Readable   Thu Feb 18 15:45:33 2021 EET
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /localdisk/users/vlsi1-u12/cadence/MyDesignLib/NOR_l/layout/layout.oa.cdslck
+TimeEditLocked                 Thu Feb 18 15:47:06 2021 EET
